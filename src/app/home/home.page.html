@@ -1,0 +1,33 @@
+<ion-header [translucent]="true" class="ion-text-center">
+  <ion-toolbar>
+    <ion-title>
+      Lista de peças
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense" >
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div>
+    <ion-list>
+      <ion-item *ngFor="let peca of pecas">
+        <ion-label [routerLink]="['/peca', peca.cod]">
+          <ion-text>
+            <h2>Código: {{peca.cod}}  - {{peca.descricao}}</h2> 
+          </ion-text>
+          <ion-text>
+            <h3>Tipo: {{peca.tipo}}  -  Preço: {{peca.preco}}</h3>
+          </ion-text>
+          <ion-text> 
+            <h3>Quantidade: {{peca.qtd}}  -  Loja: {{peca.loja}}</h3>
+          </ion-text>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

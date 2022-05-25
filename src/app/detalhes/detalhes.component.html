@@ -1,0 +1,33 @@
+<ion-header [translucent]="true" class="ion-text-center">
+  <ion-toolbar>
+    <ion-title>
+      Detalhes da peça
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <h5>
+        Descrição da peça: {{peca.descricao}}
+      </h5>
+    </ion-item>
+    <ion-item>
+      <p>
+        Preço: R${{peca.preco}}
+      </p>
+    </ion-item>
+    <ion-item>
+      <p>
+       Categoria: {{peca.tipo}} - Quantidade em estoque: {{peca.qtd}}
+     </p>
+   </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      Loja: {{peca.loja}} - Visualizar a página da loja (em breve)
+    </ion-item>
+  </ion-list>
+  <ion-button expand="block" fill="outline" [routerLink]="['/home']">voltar</ion-button>
+</ion-content>
